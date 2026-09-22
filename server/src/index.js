@@ -7,6 +7,7 @@ import payRoutes from './routes/pay.js';
 import memberRoutes from './routes/membership.js';
 import adminRoutes from './routes/admin.js';
 import cardRoutes from './routes/cards.js';
+import orderRoutes from './routes/orders.js';
 
 const app = express();
 app.use(cors());
@@ -18,6 +19,7 @@ app.get('/api/health', (_, res) => res.json({ ok: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/draw', drawRoutes);
 app.use('/api/pay', payRoutes);
+app.use('/api/orders', orderRoutes);
 app.use('/api/membership', memberRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/cards', cardRoutes);
